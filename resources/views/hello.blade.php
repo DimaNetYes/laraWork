@@ -8,7 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-
+    <p>ADFOKFOKASPOFK</p>
+<?php
+//        $name = "Dima";
+        echo $name;
+?>
 </body>
 </html>
         
