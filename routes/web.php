@@ -17,12 +17,15 @@ Route::get('/', function () {
 });
 
 Route::get("/tasks", function(){
-    $tasks = DB::table('tasks')->get();
+//    $tasks = DB::table('tasks')->get();
+    $tasks = App\Task::incomplete();
+
     return view("hello", compact('tasks'));
 });
 
 Route::get("/tasks/{task}", function($id){
-    $task = DB::table('tasks')->find($id);
+//    $task = DB::table('tasks')->find($id);
+    $task = App\Task::find($id);
 //    dd($task);
     return view("tasks.show", compact('task'));
 });
