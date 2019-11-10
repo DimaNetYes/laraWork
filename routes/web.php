@@ -12,12 +12,19 @@
 */
 
 Route::get('/', function () {
+
     return view('welcome');
 });
 
-Route::get("hello", function(){
-    $name = "Alex";
-    return view("hello", ['name' => $name]);
+Route::get("/tasks", function(){
+    $tasks = DB::table('tasks')->get();
+    return view("hello", compact('tasks'));
+});
+
+Route::get("/tasks/{task}", function($id){
+    $task = DB::table('tasks')->find($id);
+//    dd($task);
+    return view("tasks.show", compact('task'));
 });
 
 
