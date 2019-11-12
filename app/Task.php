@@ -10,6 +10,4 @@ class Task extends Model
         return static::where('completed', 0)->get();
     }
 
-
-
 }
