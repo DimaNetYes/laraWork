@@ -35,3 +35,7 @@ Route::get('/tasks/{task}', 'TasksController@show');
 
 Route::get("index", 'PostsController@index');
 Route::get("index/{pp}", 'PostsController@show');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
