@@ -39,3 +39,7 @@ Route::get("index/{pp}", 'PostsController@show');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/send', 'mailController@send');
+
+
+

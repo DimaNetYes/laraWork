@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+//        $user = DB::table('users')->all();
+//        dd($user);
         return view('home');
     }
 }
